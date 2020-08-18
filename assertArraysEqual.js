@@ -1,16 +1,18 @@
-const assertArraysEqual = function(actualArr,expectedArr) {
-  let count = 0;
-  for (let i = 0; i < actualArr.length; ++i) {
-    if (actualArr[i] !== expectedArr[i]) {
-      count = 1;
+const eqArrays = function(arr1,arr2) {
+  for (let i = 0; i < arr1.length; ++i) {
+    if (arr1[i] !== arr2[i]) {
+      return false;
     }
-  };
-  if (count === 0) {
+  }
+  return true;
+};
+const assertArraysEqual = function(actualArr,expectedArr) {
+  if (eqArrays(actualArr,expectedArr)) {
     console.log(`✅✅✅Assertation Passed: ${actualArr} === ${expectedArr}`)
   } else {
     console.log(`🛑🛑🛑Assertation Failed: ${actualArr} !== ${expectedArr}`)
-  };
-};
+  }
+}
 //Test Case:
-//assertArraysEqual([1,2,3],[2,4]);
-//assertArraysEqual([],[]);
+assertArraysEqual([1,2,3],[2,4]);
+assertArraysEqual([],[]);
