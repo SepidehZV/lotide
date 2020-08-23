@@ -1,20 +1,3 @@
-// Assertation function
-/*const eqArrays = function(arr1,arr2) {
-  for (let i = 0; i < Math.max(arr1.length,arr2.length); ++i) {
-    if (arr1[i] !== arr2[i]) {
-      return false;
-    }
-  }
-  return true;
-};
-const assertArraysEqual = function(actualArr,expectedArr) {
-  if (eqArrays(actualArr,expectedArr)) {
-    console.log(`✅✅✅Assertation Passed: ${actualArr} === ${expectedArr}`);
-  } else {
-    console.log(`🛑🛑🛑Assertation Failed: ${actualArr} !== ${expectedArr}`);
-  }
-};*/
-
 //map function
 const map = function(array,callback) {
   let result = [];
@@ -25,7 +8,7 @@ const map = function(array,callback) {
 
   return result;
 };
-
+module.exports = map;
 
 //test case
 //const words = ["ground", "control", "to", "major", "tom"];
